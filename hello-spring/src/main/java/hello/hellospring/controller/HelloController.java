@@ -31,13 +31,13 @@ public class HelloController {
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);
-        return hello;
+        return hello; // json으로 출력
     }
 
     static class Hello {
         private String name;
 
-        public String getName() {
+        public String getName() { // 프로퍼티 접근 방식
             return name;
         }
 
